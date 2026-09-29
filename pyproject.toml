@@ -12,7 +12,11 @@
 # ============================================================
 
 [project]
-name = "datafun-06-ml" # CUSTOM: Package distribution name (use lowercase and dashes).
+name = "datafun-06-ml"
+description = "Linear regression and predictive analytics project by Lindsay Miller."
+authors = [
+    { name = "Lindsay Miller" }
+]
 readme = "README.md"
 requires-python = ">=3.14"
 version = "0.1.0"
@@ -27,6 +31,10 @@ dependencies = [
     "seaborn",   # statistical data visualization built on matplotlib
     "matplotlib" # plotting library for static, animated, and interactive visualizations in Python
 ]
+
+[project.urls]
+Homepage = "https://lindsaymiller1807.github.io/datafun-06-ml/"
+Repository = "https://github.com/lindsaymiller1807/datafun-06-ml"
 
 [dependency-groups]
 # WHY: Development dependencies support maintaining and validating the project

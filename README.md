@@ -10,6 +10,8 @@
 [![Zensical docs](https://img.shields.io/badge/Zensical-docs-purple)](https://zensical.org/)
 [![MIT](https://img.shields.io/badge/license-see%20LICENSE-yellow.svg)](./LICENSE)
 
+## Predictive Analytics Project
+**Author: Lindsay Miller**
 > Professional Python project: linear regression and predictive analytics.
 
 ## Project Goal
@@ -93,7 +95,7 @@ Follow the guide for the **full instructions**.
 Open a machine terminal in your `Repos` folder:
 
 ```shell
-git clone https://github.com/denisecase/datafun-06-ml
+git clone https://github.com/lindsaymiller1807/datafun-06-ml.git
 
 cd datafun-06-ml
 code .
@@ -187,7 +189,7 @@ Press `Ctrl c` (both keys together) or `Ctrl+Z` then `Enter` on Windows.
 
 ## Documentation
 
-- [Documentation](https://denisecase.github.io/datafun-06-ml/)
+- [Documentation](https://lindsaymiller1807.github.io/datafun-06-ml/)
 
 ## Data Card
 
