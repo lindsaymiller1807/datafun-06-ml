@@ -27,5 +27,33 @@ to get a project like this running on your machine.
 
 ## Initial Results
 
-After reviewing the dataset, use the code in the **src/datafun**
-folder to
+I used **flipper length (mm)** to predict **body mass (g)** for the Palmer Penguins dataset using a simple linear regression model.
+
+The model learned the following relationship:
+
+```text
+body_mass_g = 49.851 × flipper_length_mm - 5816.874
+```
+
+### Model Results
+Baseline RMSE: 751.68
+Linear Regression RMSE: 356.05
+Baseline R-squared: -0.002
+Linear Regression R-squared: 0.775
+
+The linear regression model performed much better than the baseline model. The RMSE decreased from 751.68 grams to 356.05 grams, meaning the model's predictions were much closer to the actual body masses.
+
+The R-squared value of 0.775 means that approximately 77.5% of the variation in body mass in the test data was explained by flipper length in this model.
+
+### Prediction Plot
+The prediction plot shows a clear positive relationship between flipper length and body mass. Penguins with longer flippers generally had greater body mass.
+
+![Flipper Length vs. Body Mass](./images/regression-predictions.png)
+
+### Residual Plot
+The residuals are scattered above and below zero. This means the model sometimes overpredicts and sometimes underpredicts body mass rather than consistently making errors in only one direction.
+
+![Residuals for Flipper Length Model](./images/regression-residuals.png)
+
+### Interpretation
+Based on these results, flipper length appears to be a useful predictor of body mass for this dataset. The linear regression model clearly improved on the simple baseline model, although there is still variation in body mass that flipper length alone does not explain.
