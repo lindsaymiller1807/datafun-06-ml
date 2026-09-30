@@ -99,7 +99,7 @@ EVALUATE    baseline vs model on y_test
 ## Important Folders and Files
 
 - **data/raw** - raw data
-- **docs/** - project narrative and documentation\
+- **docs/** - project narrative and documentation
 - **src/datafun** - supporting Python code
 - **pyproject.toml** - project configuration
 - **zensical.toml** - documentation configuration
