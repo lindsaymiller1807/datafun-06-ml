@@ -111,7 +111,7 @@ TARGET_COLUMN: Final[str] = "body_mass_g"
 # This must match a numeric column name EXACTLY
 # as it appears in the data file.
 
-FEATURE_COLUMN: Final[str] = "bill_length_mm"
+FEATURE_COLUMN: Final[str] = "flipper_length_mm"
 
 # === DOCUMENT WHY THE FEATURE MIGHT HELP ===
 
@@ -122,13 +122,13 @@ FEATURE_COLUMN: Final[str] = "bill_length_mm"
 FEATURE_DECISION: Final[str] = r"""
 I want to predict body mass.
 
-I selected bill length as the feature.
+I selected flipper length as the feature.
 
-A bigger penguin may have both a longer bill and more mass,
-so bill length might contain useful information
+A larger penguin may have both a longer flippers and greater body mass,
+so flipper length might contain useful information
 for predicting body mass.
 
-I do not know yet how well bill length will predict body mass.
+I do not know yet how well flipper length will predict body mass.
 The modeling process will provide evidence.
 """
 
@@ -181,7 +181,7 @@ BASELINE_DECISION: Final[str] = r"""
 Before evaluating the LinearRegression model,
 I need a simple baseline for comparison.
 
-The baseline will ignore bill length
+The baseline will ignore flipper length
 and predict the average body mass
 from the training data for every test observation.
 
@@ -437,8 +437,8 @@ def main() -> None:
     # CUSTOM: The analyst can customize
     # the returned Matplotlib Axes object.
 
-    prediction_ax.set_title("Bill Length vs. Body Mass")
-    prediction_ax.set_xlabel("Bill Length (mm)")
+    prediction_ax.set_title("Flipper Length vs. Body Mass")
+    prediction_ax.set_xlabel("Flipper Length (mm)")
     prediction_ax.set_ylabel("Body Mass (g)")
     prediction_ax.legend()
 
@@ -474,8 +474,8 @@ def main() -> None:
     # CUSTOM: The analyst can customize
     # the returned Matplotlib Axes object.
 
-    residual_ax.set_title("Residuals for Bill Length Model")
-    residual_ax.set_xlabel("Bill Length (mm)")
+    residual_ax.set_title("Residuals for Flipper Length Model")
+    residual_ax.set_xlabel("Flipper Length (mm)")
     residual_ax.set_ylabel("Residual (Actual - Predicted Body Mass)")
 
     save_chart(
@@ -500,22 +500,28 @@ def main() -> None:
     # in a simple multi-line raw string.
 
     LOG.info(r"""CUSTOM OBSERVATIONS:
-    I used bill length to predict body mass.
+    I used flipper length to predict body mass.
 
-    The baseline RMSE was ...
-    The LinearRegression RMSE was ...
+    The baseline RMSE was 751.68.
+    The LinearRegression RMSE was 356.05.
 
     Compared with the baseline,
-    the LinearRegression model ...
+    the LinearRegression model had a much lower prediction error.
 
-    The model R-squared was ...
+    The model R-squared was 0.775.
 
-    In the residual plot, I observed ...
+    In the residual plot, I observed that the residuals were
+    scattered above and below zero without a strong curved pattern,
+    although a few observations had larger residuals.
 
     Based on this evidence,
-    I conclude ...
+    I conclude that flipper length is a useful predictor of body mass
+    and that the linear regression model performs much better
+    than the baseline model.
 
-    Next, I would like to try ...
+    Next, I would like to compare flipper length with multiple
+    penguin measurements to see whether a combination of features
+    could improve the prediction of body mass.
     """)
 
     # ============================================================
