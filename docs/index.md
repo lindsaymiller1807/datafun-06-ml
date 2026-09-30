@@ -36,16 +36,18 @@ body_mass_g = 49.851 × flipper_length_mm - 5816.874
 ```
 
 ### Model Results
-Baseline RMSE: 751.68
-Linear Regression RMSE: 356.05
-Baseline R-squared: -0.002
-Linear Regression R-squared: 0.775
+- **Baseline RMSE:** 751.68
+- **Linear Regression RMSE:** 356.05
+- **Baseline R-squared:** -0.002
+- **Linear Regression R-squared:** 0.775
+
 
 The linear regression model performed much better than the baseline model. The RMSE decreased from 751.68 grams to 356.05 grams, meaning the model's predictions were much closer to the actual body masses.
 
 The R-squared value of 0.775 means that approximately 77.5% of the variation in body mass in the test data was explained by flipper length in this model.
 
 ### Prediction Plot
+
 The prediction plot shows a clear positive relationship between flipper length and body mass. Penguins with longer flippers generally had greater body mass.
 
 ![Flipper Length vs. Body Mass](./images/regression-predictions.png)
@@ -56,4 +58,5 @@ The residuals are scattered above and below zero. This means the model sometimes
 ![Residuals for Flipper Length Model](./images/regression-residuals.png)
 
 ### Interpretation
-Based on these results, flipper length appears to be a useful predictor of body mass for this dataset. The linear regression model clearly improved on the simple baseline model, although there is still variation in body mass that flipper length alone does not explain.
+
+Based on these results, flipper length appears to be a useful predictor of body mass for this dataset. The linear regression model improved substantially over the baseline model, reducing RMSE from 751.68 grams to 356.05 grams. The model also achieved an R-squared value of 0.775, meaning that about 77.5% of the variation in body mass in the test data was explained by flipper length. However, the residual plot shows that some prediction error remains, so flipper length alone does not explain all variation in body mass.

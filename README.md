@@ -16,19 +16,62 @@
 
 ## Project Goal
 
-This project introduces **linear regression**, the process of
-fitting a model to data and using it to make predictions.
+This project uses **linear regression** to examine whether
+**flipper length (mm)** can be used to predict **body mass (g)**
+in the Palmer Penguins dataset.
 
-Think about two variables that might be related:
+The goal is to compare a simple linear regression model with a baseline model,
+evaluate the model using RMSE and R-squared, and examine prediction and residual
+plots to determine how useful flipper length is for predicting body mass.
 
-- Does study time predict exam scores?
-- Does temperature predict energy usage?
-- Does advertising spend predict revenue?
+## How to Run the Project
 
-Your goal: run the example, read the code,
-and apply the same approach to a dataset and question of your own choosing.
+From the project root folder in the VS Code terminal, run:
 
-For data suggestions, please see [data/raw/README.md](data/raw/README.md).
+```shell
+uv run python -m datafun.app
+```
+
+## My Analysis
+
+For this project, I used the Palmer Penguins dataset to investigate whether
+**flipper length (mm)** can be used to predict **body mass (g)**.
+
+I used a simple linear regression model and compared its performance with a
+baseline model that predicted the mean body mass.
+
+### Key Results
+
+| Model | RMSE | R-squared |
+|---|---:|---:|
+| Baseline | 751.68 | -0.002 |
+| Linear Regression | 356.05 | 0.775 |
+
+The linear regression model performed much better than the baseline model.
+The RMSE decreased from 751.68 grams to 356.05 grams.
+
+The model R-squared value was 0.775, meaning that approximately 77.5% of the
+variation in body mass in the test data was explained by flipper length.
+
+### Prediction Plot
+
+![Flipper Length vs. Body Mass](docs/images/regression-predictions.png)
+
+### Residual Plot
+
+![Residuals for Flipper Length Model](docs/images/regression-residuals.png)
+
+### Summary
+
+The results show a clear positive relationship between flipper length and
+body mass. Penguins with longer flippers generally had greater body mass.
+
+The residuals were scattered above and below zero, showing that the model
+sometimes overpredicted and sometimes underpredicted body mass.
+
+Overall, flipper length appears to be a useful predictor of body mass for
+this dataset, although flipper length alone does not explain all of the
+variation in body mass.
 
 ## Standard Process
 
