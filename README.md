@@ -1,6 +1,6 @@
 # datafun-06-ml
 
-[![Workflow Guide](https://img.shields.io/badge/Pro--Guide-pro--analytics--02-green)](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
+
 [![Python 3.14](https://img.shields.io/badge/python-3.14%2B-blue?logo=python)](./pyproject.toml)
 [![uv managed](https://img.shields.io/badge/uv-managed-DE5FE9)](https://docs.astral.sh/uv/)
 [![ty type checked](https://img.shields.io/badge/ty-type_checked-2F80ED)](https://docs.astral.sh/ty/)
@@ -106,9 +106,7 @@ EVALUATE    baseline vs model on y_test
 
 ## Common Workflow
 
-Follow the
-[step-by-step workflow guide](https://denisecase.github.io/pro-analytics-02/workflow-b-apply-example-project/)
-carefully.
+See the project documentation for details about this analysis and workflow.
 
 ## Success
 
@@ -146,9 +144,8 @@ code .
 
 ### In a VS Code terminal
 
-These are listed for convenience.
-For best results, follow the detailed instructions in
-[pro-analytics-02 guide](https://denisecase.github.io/pro-analytics-02/).
+These commands are listed for convenience.
+See the project documentation for additional details.
 
 Use VS Code menu option `Terminal` / `New Terminal` to open a **VS Code terminal**
 in the root project folder.
