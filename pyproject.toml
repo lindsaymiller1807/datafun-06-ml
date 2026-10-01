@@ -136,3 +136,4 @@ requires = ["hatchling"]
 [tool.hatch.build.targets.wheel]
 # CUSTOM: Must match src/ folders.
 packages = ["src/datafun"]  # REQ.PACKAGES: Discovery rooted at src/.
+
